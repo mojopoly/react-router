@@ -5,6 +5,7 @@ import './App.css';
 
 const HomePage = props => {
   console.log(props);
+  //history methid below gives u more dynamic access to decide when we want this to work and is needed for lifecycle methods, we can't use the react dom Link as it is only a function
   return (
     <div>
       <button onClick={() => props.history.push('/topics')}>Topics </button>
@@ -14,6 +15,7 @@ const HomePage = props => {
 };
 
 const TopicsList = props => {
+  console.log(props);
   return (
     <div>
       <h1>TOPIC LIST PAGE</h1>
@@ -25,6 +27,7 @@ const TopicsList = props => {
 };
 
 const TopicDetail = props => {
+  console.log(props);
   return (
     <div>
       <h1>TOPIC DETAIL PAGE: {props.match.params.topicId}</h1>
